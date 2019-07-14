@@ -4,8 +4,16 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.util.SortedSet;
+
 @Document
 public class User {
+
+    public enum Type{
+        UNREGISTERED,
+        REGISTERED,
+        ADMIN
+    }
 
     @Id
     private String id;
@@ -21,6 +29,9 @@ public class User {
 
     @Field
     private String phone;
+
+    @Field
+    private SortedSet<Type> types;
 
     public String getId() {
         return id;
@@ -60,5 +71,13 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public SortedSet<Type> getTypes() {
+        return types;
+    }
+
+    public void setTypes(SortedSet<Type> types) {
+        this.types = types;
     }
 }
