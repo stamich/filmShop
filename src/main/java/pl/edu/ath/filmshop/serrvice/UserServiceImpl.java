@@ -36,8 +36,9 @@ public class UserServiceImpl implements UserService {
             entity.setEmail(user.getEmail());
             entity.setPhone(user.getPhone());
             entity.setTypes(user.getTypes());
+            entity.setNick(user.getNick());
+            entity.setPassword(user.getPassword());
         }
-//        repository.save(user);
     }
 
     public void delete(User user){
