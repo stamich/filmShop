@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class Film {
 
     @Id
-    private Long id;
+    private String id;
 
     @Field
     private String title;
@@ -19,11 +19,11 @@ public class Film {
     @Field
     private Double price;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

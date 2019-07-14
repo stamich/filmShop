@@ -10,7 +10,7 @@ import java.util.List;
 public class Cart {
 
     @Id
-    private Long id;
+    private String id;
 
     @Field
     private Double totalCost;
@@ -18,11 +18,11 @@ public class Cart {
     @Field
     private List<Film> films;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
